@@ -4,7 +4,7 @@
 
 int main()
 {
-    int i, n, num, temp, found = 0;
+    int i, j, n, num, temp, found = 0;
 
     printf("How many elements does your array have? ");
     scanf("%d", &n);
@@ -18,10 +18,12 @@ int main()
     }
 
     for(i = 0; i < n; i++){
-        if (arr_1[i] > arr_1[i + 1]){
-            temp = arr_1[i];
-            arr_1[i] = arr_1[i+1];
-            arr_1[i + 1] = temp; 
+        for(j = 0; j < i; j++){
+            if (arr_1[j] > arr_1[j + 1]){
+            temp = arr_1[j];
+            arr_1[j] = arr_1[j+1];
+            arr_1[j + 1] = temp; 
+        }
         }
     }
 
