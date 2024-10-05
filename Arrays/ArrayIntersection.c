@@ -2,7 +2,7 @@
 
 int main()
 {
-    int i, j, n1, n2, count = 0;
+    int i, j, n1, n2, count = 0, a = 0, found;
     
     printf("How many elements does your first array have? ");
     scanf("%d", &n1);
@@ -29,31 +29,30 @@ int main()
     for(i = 0; i < n1; i++){
         for(j = 0; j < n2; j++){
             if (arr_1[i] == arr_2[j]){
-                arr_3[i] = arr_1[i];
+                found = 0;
+                for(int k = 0; k < count; k++){
+                    if (arr_3[k] == arr_1[i]){
+                        found = 1;
+                        break;
+                    }
+                }
+                if(!found){
+                arr_3[a] = arr_1[i];
+                a++;
+                count++;                    
+                }
             }
         }
+    }    
+
+    if (count == 0){
+        printf("No common elements found!");
     }
-
-    // // Add elements of arr_2 to arr_3, only if they are not already in arr_1
-    // for(i = 0; i < n2; i++){
-    //     int found = 0;
-    //     // Check if arr_2[i] is already in arr_1
-    //     for(j = 0; j < n1; j++){
-    //         if (arr_2[i] == arr_1[j]){
-    //             found = 1;
-    //             break;
-    //         }
-    //     }
-    //     // If not found, add it to arr_3
-    //     if (!found){
-    //         arr_3[n1 + count] = arr_2[i];
-    //         count++;
-    //     }
-    // }
-
-    printf("Here's the intersection of the two arrays: ");
-    for(i = 0; i < n1; i++){
+    else{
+        printf("Here's the intersection of the two arrays: ");
+        for(i = 0; i < count; i++){
         printf("%d ", arr_3[i]);
+    }
     }
 
     return 0;

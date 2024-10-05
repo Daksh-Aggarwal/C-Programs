@@ -1,6 +1,6 @@
 #include <stdio.h>
 
-void tower(int n, char A, char B, char C){
+void tower(int n, char A, char C, char B){
     if (n == 0){
         return;
     }
