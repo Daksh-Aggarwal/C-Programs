@@ -33,7 +33,7 @@ int main()
         printf("\n\n");
     }
 
-    printf("The first matrix is: \n");
+    printf("The second matrix is: \n");
     for(i = 0; i < a; i++){
         for(j = 0; j < b; j++){
             printf("%d\t", arr_2[i][j]);
