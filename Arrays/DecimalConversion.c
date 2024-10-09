@@ -1,46 +1,38 @@
-// WIP
-// Program to convert Decimal numbers to any base
+// Program to convert Decimal numbers to any base (without function)
 
 #include <stdio.h>
 
-    int Conversion(int num, int base) {
-        int result[32];
-        int i = 0, j;
-        
-        while (num > 0) {
-            result[i] = num % base;
-            num = num / base;
-            i++;
-        }
+int main() {
+    int num, k, i = 0, j, result[32];
 
-        if(base == 2){
-            printf("Binary: ");
-        }
-        else if(base == 8){
-            printf("Octal: ");
+    printf("Enter the decimal number: ");
+    scanf("%d", &num);
 
-        }
-        else if(base == 16){
-            printf("Hexadecimal: ");
-        }
-        else{
-            printf("Result: ");
-        }
-        for (j = i - 1; j >= 0; j--)
-            printf("%d", result[j]);
-        printf("\n");
+    printf("Which base do you want to convert the decimal number into? ");
+    scanf("%d", &k);
+    
+    while (num > 0) {
+        result[i] = num % k;
+        num = num / k;
+        i++;
     }
 
+    if(k == 2){
+        printf("Binary: ");
+    }
+    else if(k == 8){
+        printf("Octal: ");
 
-    int main() {
-        int num, k;
-        printf("Enter the decimal number: ");
-        scanf("%d", &num);
-
-        printf("Which base do you want to convert the decimal number into? ");
-        scanf("%d", &k);
-
-        Conversion(num, k);
+    }
+    else if(k == 16){
+        printf("Hexadecimal: ");
+    }
+    else{
+        printf("Result: ");
+    }
+    for (j = i - 1; j >= 0; j--)
+        printf("%d", result[j]);
+    printf("\n");
 
     return 0;
 }

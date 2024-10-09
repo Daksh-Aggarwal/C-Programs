@@ -5,6 +5,7 @@
 int main()
 {
     int i, j, temp, n, k;
+    char direction;
 
     printf("How many elements does your array have? ");
     scanf("%d", &n);
@@ -24,19 +25,35 @@ int main()
     printf("\nHow many rotations do you want to perform? ");
     scanf("%d", &k);
 
+    printf("\nIn which direction do you want to perform the rotation? (L/R) ");
+    scanf(" %c", &direction);
+
     if (k > n){
         k %= n;
     }
 
-    for(i = 0; i < k; i++){
-        temp = sample[0];
-        for(j = 0; j < n - 1; j++){
-        sample[j] = sample[j + 1];
+    if(direction == 'L' || direction == 'l'){
+        for(i = 0; i < k; i++){
+            temp = sample[0];
+            for(j = 0; j < n - 1; j++){
+                sample[j] = sample[j + 1];
+            }
+            sample[n - 1] = temp;
         }
-        sample[n - 1] = temp;
+        printf("Rotating towards the left...\n");
     }
 
-    printf("Rotating towards the left...\n");
+    else if(direction == 'R' || direction == 'r'){
+        for(i = 0; i < k; i++){
+            temp = sample[n - 1];
+            for(j = 1; j < n; j++){
+                sample[j] = sample[j - 1];
+            }
+            sample[0] = temp;
+        }
+        printf("Rotating towards the right...\n");
+    }
+
     for(i = 0; i < n; i++){
         printf("%d ", sample[i]);
     }
