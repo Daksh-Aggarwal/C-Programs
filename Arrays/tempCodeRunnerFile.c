@@ -1,0 +1,2 @@
+
+            result[i] = num % k;
