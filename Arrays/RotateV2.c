@@ -1,4 +1,4 @@
-// With dynamic arrays
+// With dynamic arrays and choice of direction
 
 #include <stdio.h>
 
@@ -46,7 +46,7 @@ int main()
     else if(direction == 'R' || direction == 'r'){
         for(i = 0; i < k; i++){
             temp = sample[n - 1];
-            for(j = 1; j < n; j++){
+            for(j = n - 1; j > 0; j--){
                 sample[j] = sample[j - 1];
             }
             sample[0] = temp;
