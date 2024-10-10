@@ -3,28 +3,33 @@
 
 int main()
 {
-    int n, i, d, digits = 0, sum = 0;
+    int num, i, digit, temp, digits = 0, sum = 0;
 
     printf("Enter the integer: ");
-    scanf("%d", &n);
+    scanf("%d", &num);
 
-    for(i = 0;;i++){
-        d = n / 10;
-        n /= 10;
-        digits += 1;
+    temp = num;
 
-        if (n == 0){
-            break;
-        }
+// Counting digits
+    while(num != 0){
+        num /= 10;
+        digits++;
     }
 
-    for(i = 1; i <= digits; i++){
-        d = n / 10;
-        n /= 10;
-        sum += pow(d, 3);
+// Resetting the number
+    num = temp;
+
+// Finding the sum of cube of digits
+    while(num != 0){
+        digit = num % 10;
+        sum += pow(digit, 3);
+        num /= 10;
     }
 
-    if (sum == n){
+// Resetting the number
+    num = temp;
+
+    if (sum == num){
         printf("The number is an armstrong number.");
     }
     else{

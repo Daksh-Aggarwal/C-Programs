@@ -2,7 +2,7 @@
 #include <math.h>
 
 int main(){
-    int i, n, prime;
+    int i, n, prime = 1;
 
     printf("Enter a number: ");
     scanf("%d", &n);
