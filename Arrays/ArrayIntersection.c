@@ -2,7 +2,7 @@
 
 int main()
 {
-    int i, j, n1, n2, count = 0, a = 0, found;
+    int i, j, n1, n2, count = 0;
     
     printf("How many elements does your first array have? ");
     scanf("%d", &n1);
@@ -29,21 +29,12 @@ int main()
     for(i = 0; i < n1; i++){
         for(j = 0; j < n2; j++){
             if (arr_1[i] == arr_2[j]){
-                found = 0;
-                for(int k = 0; k < count; k++){
-                    if (arr_3[k] == arr_1[i]){
-                        found = 1;
-                        break;
-                    }
-                }
-                if(!found){
-                arr_3[a] = arr_1[i];
-                a++;
-                count++;                    
-                }
-            }
+                arr_3[count] = arr_1[i];
+                count++;
+                break;
+        }    
         }
-    }    
+    }
 
     if (count == 0){
         printf("No common elements found!");
