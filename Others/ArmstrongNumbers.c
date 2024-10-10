@@ -19,7 +19,7 @@ int main()
 // Resetting the number
     num = temp;
 
-// Finding the sum of cube of digits
+// Finding the sum of digits to the power of no. of digits
     while(num != 0){
         digit = num % 10;
         sum += pow(digit, digits);
