@@ -22,7 +22,7 @@ int main()
 // Finding the sum of cube of digits
     while(num != 0){
         digit = num % 10;
-        sum += pow(digit, 3);
+        sum += pow(digit, digits);
         num /= 10;
     }
 
