@@ -12,6 +12,7 @@ int main()
 
     int arr_1[m1][n1], arr_2[m2][n2], arr_3[m1][n2];    
 
+// Setting each product matrix element to 0
     if(n1 == m2){
         for(i = 0; i < m1; i++){
             for(j = 0; j < n2; j++){
@@ -19,6 +20,7 @@ int main()
             }
         }
 
+// Getting the matrix elements from the user
         printf("Please enter the first matrix's elements.\n");
         for(i = 0; i < m1; i++){
             for(j = 0; j < n1; j++){
@@ -35,6 +37,7 @@ int main()
             }
         }
 
+// Printing the entered matrices
         printf("The first matrix is: \n");
         for(i = 0; i < m1; i++){
             for(j = 0; j < n1; j++){
@@ -51,6 +54,7 @@ int main()
             printf("\n\n");
         }
 
+// Multiplication begins here
         for(i = 0; i < m1; i++){
             for(j = 0; j < n2; j++){
                 for(k = 0; k < n1; k++){
@@ -59,6 +63,7 @@ int main()
             }
         }
 
+// Printing the product matrix
         printf("Product of the two matrices: \n");
         for(i = 0; i < m1; i++){
             for(j = 0; j < n2; j++){
@@ -69,6 +74,7 @@ int main()
 
     }
 
+// Exception handling
     else{
         printf("\nMultiplication of the entered matrices is not possible!");
     }

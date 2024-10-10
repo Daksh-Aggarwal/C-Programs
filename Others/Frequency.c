@@ -5,11 +5,11 @@
 int main(){
     int i,j,arr[7]={0};
 
-    srand(time(0));
+    srand(time(0)); // For a random seed each time
 
     for (i=0;i<600;i++){
-        j=rand()%6;
-        j=j+1;
+        j=rand()%6; // rand()%RAND_MAX
+        j=j+1; // As 'j' ranges from 0 to 5
         arr[j]++;
     }
 
