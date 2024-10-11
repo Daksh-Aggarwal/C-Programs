@@ -4,6 +4,7 @@ int main()
 {
     int i, n1, n2;
     
+// Getting the arrays from the user
     printf("How many elements does your first array have? ");
     scanf("%d", &n1);
     
@@ -34,6 +35,7 @@ int main()
         arr_3[i + n2] = arr_2[i];
     }
 
+// Printing the merged arrays
     printf("Here's your merged array: ");
     for(i = 0; i < n1 + n2; i++){
         printf("%d ", arr_3[i]);
