@@ -2,8 +2,8 @@
 
 int main()
 {
-    int n, i, j, temp, sum = 0, median, max = 0, count = 0, mode = -1;
-    float mean;
+    int n, i, j, temp, sum = 0, max = 0, count = 0, mode = -1;
+    float mean, median;
 
     printf("How many elements does your array have? ");
     scanf("%d", &n);
@@ -32,7 +32,7 @@ int main()
     
 // Finding the median
     if(n % 2 == 0){
-        median = (arr_1[(n/2) - 1] + arr_1[(n/2)])/2;
+        median = ((float)(arr_1[(n/2) - 1] + arr_1[(n/2)])/2);
     }
     else{
         median = arr_1[((n+1)/2) - 1];
@@ -60,7 +60,7 @@ int main()
 
 // Printing the mean, median and mode
     printf("\nMean = %.2f", mean);
-    printf("\nMedian = %d", median);
+    printf("\nMedian = %.2f", median);
     if(max == 1){
         printf("\nMode = None");
     }
