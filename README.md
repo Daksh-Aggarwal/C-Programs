@@ -41,4 +41,3 @@ I welcome contributions! If you have suggestions for improvements or additional 
 If you have any questions or feedback, feel free to reach out to me on GitHub!
 
 Thank you for checking out my C programming practice repository! Happy coding! 😊
-```
