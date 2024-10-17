@@ -1,8 +1,6 @@
-```markdown
 # C Programming Practice Programs
 
 Welcome to my collection of C programming projects! Here, you'll find a variety of programs that I've created primarily for practice. Each program demonstrates different concepts and techniques in C, helping me deepen my understanding of the language.
-```
 
 ## 🚀 Getting Started
 
