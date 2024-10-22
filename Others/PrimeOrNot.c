@@ -11,7 +11,7 @@ int main(){
         printf("It is neither prime nor composite.");
     }
     else{
-        for(i=2; i <= sqrt(n); i++){
+        for(i = 2; i <= sqrt(n); i++){
             if (n % i == 0){
                 prime = 0;
                 break;
