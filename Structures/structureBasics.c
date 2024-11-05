@@ -35,5 +35,13 @@ int main(){
         printf("\tMarks: %.2f", student[i].marks);
     }
 
+    float sum = 0, average;
+    for(i = 0; i < n; i++){
+        sum += student[i].marks;
+    }
+    average = sum / n;
+
+    printf("\n\nAverage marks: %f", average);
+
     return 0;
 }
