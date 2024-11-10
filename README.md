@@ -8,12 +8,12 @@ To get a copy of this repository on your local machine, follow these steps:
 
 1. **Clone the repository**:
    ```bash
-   git clone https://github.com/yourusername/repository-name.git
+   git clone https://github.com/Daksh-Aggarwal/C-Programs.git
    ```
 
 2. **Navigate to the project directory**:
    ```bash
-   cd repository-name
+   cd C-Programs
    ```
 
 3. **Compile the C programs**:
