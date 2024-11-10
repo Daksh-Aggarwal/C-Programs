@@ -3,15 +3,22 @@
 #include <stdio.h>
 #include <math.h>
 
-int nPrimes(int n, int arr[]){
-    int i = 1;
-    while(i <= n){
-        for(int j = 2; j < sqrt(i); j++){
-            if(i % )
+void nPrimes(int n, int arr[]){
+    int i = 0, j = 2;
+    while(i < n){
+        int isPrime = 1;
+        for(int k = 2; k <= sqrt(j); k++){
+            if(j % k == 0){
+                isPrime = 0;
+                break;
         }
+        }
+        if (isPrime){
+            arr[i] = j;
+            i++;
+        }
+        j++;
     }
-
-    return arr;
 }
 
 int main(){
@@ -26,7 +33,7 @@ int main(){
     nPrimes(n, arr);
 
     printf("Here are the requested prime numbers: \n");
-    for(i = 0; i < n; i++){
+    for(int i = 0; i < n; i++){
         printf("%d ", arr[i]);
     }
     
