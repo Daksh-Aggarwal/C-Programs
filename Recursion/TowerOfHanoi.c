@@ -15,6 +15,6 @@ int main()
     printf("Enter the number of discs: ");
     scanf("%d", &n);
 
-    tower(n, 'A', 'B', 'C');
+    tower(n, 'A', 'C', 'B');
     return 0;
 }
