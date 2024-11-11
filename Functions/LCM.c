@@ -1,5 +1,3 @@
-// WIP
-
 #include <stdio.h>
 
 int lcm(int a, int b){
