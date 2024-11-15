@@ -4,15 +4,38 @@
 #include <math.h>
 
 int isArmstrongNumber(int n){
-    int digits, digit, temp;
+    int digits = 0, digit, temp, sum = 0;
 
-    while(n > )
+    temp = n;
+
+    while(n > 0){
+        digit = n % 10;
+        n /= 10;
+        digits++;
+    }
+
+    n = temp;
+
+    while(n > 0){
+        digit = n % 10;
+        n /= 10;
+        sum += pow(digit, digits);
+    }
+
+    n = temp;
+
+    if(sum == n){
+        printf("It is an armstrong number.");
+    }
+    else{
+        printf("It is not an armstrong number.");
+    }
 
 }
 
-int isPerfectNumber(int n){
+// int isPerfectNumber(int n){
 
-}
+// }
 
 int main(){
 
@@ -21,7 +44,7 @@ int main(){
     scanf("%d", n);
 
     isArmstrongNumber(n);
-    isPerfectNumber(n);
+    // isPerfectNumber(n);
 
     return 0;
 }
