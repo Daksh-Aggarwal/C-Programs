@@ -33,18 +33,31 @@ int isArmstrongNumber(int n){
 
 }
 
-// int isPerfectNumber(int n){
+int isPerfectNumber(int n){
+    int i, sum = 0;
 
-// }
+    for(i = 1; i < n; i++){
+        if(n % i == 0){
+            sum += i;
+        }
+    }
+
+    if(sum == n){
+        printf("\nIt is a perfect number.");
+    }
+    else{
+        printf("\nIt is not a perfect number.");
+    }
+}
 
 int main(){
 
     int n;
     printf("Enter the number: ");
-    scanf("%d", n);
+    scanf("%d", &n);
 
     isArmstrongNumber(n);
-    // isPerfectNumber(n);
+    isPerfectNumber(n);
 
     return 0;
 }
