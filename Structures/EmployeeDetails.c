@@ -65,15 +65,14 @@ int main(){
     int employeeID, index, found = 0;
     float newSalary;
 
+    // Asking whether the user wants to update the salary of a particular employee
     printf("Do you want to update the salary of a particular employee? (Y/N)");
     scanf(" %c", &answer);
 
+    // If the user wants to update the salary, some more questions are asked
     if(answer == 'y' || answer == 'Y'){
         printf("Enter the employee's ID: ");
         scanf("%d", &employeeID);
-
-        printf("Enter the updated salary: ");
-        scanf("%f", &newSalary);
 
         for(int i = 0; i < n; i++){
             if(employee[i].id == employeeID){
@@ -85,12 +84,15 @@ int main(){
             updateSalary(employeeID, newSalary, employee[index]);
         }
         if(found == 0){
-            printf("No employee found with the entered ID!");
+            printf("No employee found with the entered ID!"); // Exception handling
         }
+
+        printf("Enter the updated salary: ");
+        scanf("%f", &newSalary);
     }
     else{
         printf("Terminated.");
     }
-
+    
     return 0;
 }
