@@ -4,10 +4,18 @@
 int main(){
     char string[64] = "UNIVERSITY";
 
-    // printf("Enter the string: ");
-    // scanf("%s", string);
-    for(int i = 2; i < strlen(string); i += 2){
-        printf(string + i);
+    for(int i = 0; i <= strlen(string); i += 2){
+        for(int j = 0; j < i; j++){
+            printf("%c ", string[j]);
+        }
+        printf("\n");
+    }
+
+    for(int i = strlen(string); i >= 0; i -= 2){
+        for(int j = 0; j < i; j++){
+            printf("%c ", string[j]);
+        }
+        printf("\n");
     }
 
     return 0;
