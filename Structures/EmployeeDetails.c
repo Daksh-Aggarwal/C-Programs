@@ -1,3 +1,5 @@
+// Structure is passed into a function
+
 #include <stdio.h>
 
 struct employee{
