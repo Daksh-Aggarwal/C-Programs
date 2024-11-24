@@ -1,8 +1,11 @@
-// WIP
-
 #include <stdio.h>
 
-int summation(int);
+int summation(int n){
+    if (n == 0){
+        return 0;
+    }
+    return n + summation(n - 1);
+}
 
 int main(){
 
@@ -10,12 +13,7 @@ int main(){
     printf("Enter the value of n: ");
     scanf("%d", &n);
 
-    summation(n);
+    printf("%d", summation(n));
 
     return 0;
-}
-
-int summation(int n){
-    
-    if i > 0 return 
 }
