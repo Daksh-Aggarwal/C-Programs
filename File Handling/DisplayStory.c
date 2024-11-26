@@ -2,8 +2,10 @@
 
 int main(){
     FILE *fp;
+
+    fp = fopen("story.txt", "r");
+
     char ch;
-    fp = fopen("pr1.C", "r");
 
     while(1){
         ch = fgetc(fp);
@@ -12,7 +14,7 @@ int main(){
         }
         printf("%c", ch);
     }
-    printf("\n");
+
     fclose(fp);
     return 0;
 }
