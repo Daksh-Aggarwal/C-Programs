@@ -1,7 +1,8 @@
 #include <stdio.h>
 
 int main(){
-    int chars = 0, tabs = 0, spaces = 0, lines = 0;
+    int words = 0, chars = 0, tabs = 0, spaces = 0, lines = 0;
+    int inWord = 0;
     char ch;
     FILE *fp;
     fp = fopen("story.txt", "r");
@@ -12,14 +13,23 @@ int main(){
         if(ch == EOF){
             break;
         }
+        
         chars++;
-        if(ch == '\t') tabs++;
-        if(ch == ' ') spaces++;
-        if(ch == '\n') lines++;
+
+        if(ch == ' ' || ch == '\t' || ch == '\n'){
+            inWord = 0;
+            if(ch == '\t') tabs++;
+            if(ch == ' ') spaces++;
+            if(ch == '\n') lines++;
+        }
+        else if(!inWord){
+            inWord = 1;
+            words++;
+        }
     }
         fclose(fp);
 
-        printf("No of. characters = %d\nNo. of tabs = %d\nNo. of spaces = %d\nNo. of lines = %d\n", chars, tabs, spaces, lines);
+        printf("No. of words = %d\nNo of. characters = %d\nNo. of tabs = %d\nNo. of spaces = %d\nNo. of lines = %d\n", words, chars, tabs, spaces, lines);
 
         return 0;
 }

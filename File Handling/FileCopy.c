@@ -4,19 +4,19 @@ int main(){
     FILE *fs, *ft;
     char ch;
 
-    fs = fopen("pr1.c", "r");
+    fs = fopen("story.txt", "r");
 
     if(fs == NULL){ // In case the source file cannot be opened
         puts("Cannot open source file.");
-        exit(1); // Non-zero exit value indicates abnormal termination
+        return 0;
     }
 
-    ft = fopen("pr2.c", "w");
+    ft = fopen("copy.txt", "w");
 
-    if(ft == NULL){
+    if(ft == NULL){ // In case the source file cannot be opened
         puts("Cannot open target file.");
         fclose(fs);
-        exit(2);
+        return 0;
     }
 
     while(1){
