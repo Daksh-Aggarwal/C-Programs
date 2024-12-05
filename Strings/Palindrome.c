@@ -17,7 +17,9 @@ int main(){
     }
 
     int isAnagram = strcmp(string, revString);
+    
     if (isAnagram == 0) printf("The input string is an palindrome.");
+    else printf("It is not a palindrome.");
 
     return 0;
 }
