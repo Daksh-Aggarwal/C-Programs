@@ -16,9 +16,9 @@ int main(){
         revString[i] = string[length - i - 1];
     }
 
-    int isAnagram = strcmp(string, revString);
+    int isPalindrome = strcmp(string, revString);
     
-    if (isAnagram == 0) printf("The input string is an palindrome.");
+    if (isPalindrome == 0) printf("The input string is an palindrome.");
     else printf("It is not a palindrome.");
 
     return 0;
