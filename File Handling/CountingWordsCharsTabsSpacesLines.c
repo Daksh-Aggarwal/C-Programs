@@ -1,11 +1,11 @@
 #include <stdio.h>
 
 int main(){
-    int words = 0, chars = 0, tabs = 0, spaces = 0, lines = 0;
+    int words = 0, chars = 0, tabs = 0, spaces = 0, lines = 0; // lines = sentences
     int inWord = 0;
     char ch;
     FILE *fp;
-    fp = fopen("story.txt", "r");
+    fp = fopen("file1.txt", "r");
 
     while(1){
         ch = fgetc(fp);

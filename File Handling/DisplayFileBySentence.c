@@ -4,11 +4,11 @@
 int main(){
 
     FILE *fp;
-    char s[80];
+    char s[128];
 
-    fp = fopen("story.txt", "r");
+    fp = fopen("file1.txt", "r");
 
-    while(fgets(s, 80, fp) != NULL){
+    while(fgets(s, 128, fp) != NULL){
         printf("%s", s);
     }
 

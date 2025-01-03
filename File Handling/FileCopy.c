@@ -4,16 +4,16 @@ int main(){
     FILE *fs, *ft;
     char ch;
 
-    fs = fopen("story.txt", "r");
+    fs = fopen("file1.txt", "r");
 
-    if(fs == NULL){ // In case the source file cannot be opened
+    if(fs == NULL){
         puts("Cannot open source file.");
         return 0;
     }
 
-    ft = fopen("copy.txt", "w");
+    ft = fopen("file2.txt", "w");
 
-    if(ft == NULL){ // In case the source file cannot be opened
+    if(ft == NULL){
         puts("Cannot open target file.");
         fclose(fs);
         return 0;

@@ -3,7 +3,7 @@
 int main(){
     FILE *fp;
 
-    fp = fopen("story.txt", "r");
+    fp = fopen("file1.txt", "r");
 
     char ch;
 
